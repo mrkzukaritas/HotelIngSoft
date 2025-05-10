@@ -6,7 +6,10 @@
     Pagina para ver los servicios disponibles 
 </h1>
 {% for ser in servicios %}
+
+    {% if ser.disponible == True %}
 <div>
+    {# Aca solo se muestran los servicios disponibles #}
     <h3>
         {{ser}}
     </h3>
@@ -15,6 +18,13 @@
         valor: {{ser.valor}}
     </p>
 </div>
+    {% else %}
+<h3>
+    {# Aca solo se muestran los servicios no disponibles #}
+    {{ser}} no disponible
+</h3>
+
+    {% endif %}
 
 {% endfor %}
 

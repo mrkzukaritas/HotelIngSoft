@@ -5,5 +5,15 @@
 <h1>
     Espacio para reservar 
 </h1>
+<form method="POST"">
+    {% csrf_token %}
+
+    {{form}}
+
+    <button>
+        Reservar
+    </button>
+
+</form>
 {% endblock %}
 
