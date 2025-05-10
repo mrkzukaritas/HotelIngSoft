@@ -1,0 +1,21 @@
+{% extends 'layouts/plantilla.html' %}
+
+{% block content %}
+
+<h1>
+    Pagina para ver los servicios disponibles 
+</h1>
+{% for ser in servicios %}
+<div>
+    <h3>
+        {{ser}}
+    </h3>
+    <p>
+        Especificaciones: {{ser.especificacion}}<br>
+        valor: {{ser.valor}}
+    </p>
+</div>
+
+{% endfor %}
+
+{% endblock %}

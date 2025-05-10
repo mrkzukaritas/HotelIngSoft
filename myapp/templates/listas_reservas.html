@@ -1,0 +1,31 @@
+{% extends 'layouts/plantilla.html' %}
+
+{% block content %}
+<h2>
+    espacio para ver las listas de reservas 
+</h2>
+{% for res in reservas %}
+{# comentario #}
+<div>
+    <h3>
+        {{res}}
+    </h3>
+    <p>
+        {{res.nombre}}
+        
+    </p>
+    <p>
+        {{res.servicio.numero}}
+    </p>
+    {% if res.paga == False %}
+        <button>
+            pagar
+
+        </button>
+
+    {% endif %}
+
+</div>
+
+{% endfor %}
+{% endblock %}
