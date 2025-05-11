@@ -1,0 +1,35 @@
+body{
+    background: #202020;
+    color: whitesmoke;
+}
+.navbar{
+    background: #434289;
+    padding: 5px 0px;
+    
+
+    
+}
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: space-between;
+}
+.navbar ul li{
+    list-style: none;
+    padding: 10px;
+}
+.footer {
+    background: #434289;
+    padding: 5px 0px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+}

@@ -1,0 +1,17 @@
+{% extends 'layouts/plantilla.html' %}
+
+{% block content %}
+<h1>
+    Pagina para ver los pagos realizados
+</h1>
+{% if reserva.paga == True %}
+    <h2>
+        El pago de {{reserva.codigo_reserva}} ha sido realizado
+    </h2>
+{% else %}
+    <h2>
+        El pago de {{reserva.codigo_reserva}} no ha sido realizado
+    </h2>
+{% endif %}
+
+{% endblock %}

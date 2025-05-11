@@ -1,16 +1,30 @@
-<nav>
+<!-- This is a Django template file that serves as a base layout for other templates. -->
+<!-- It includes a navigation bar, a footer, and a block for content that can be overridden in child templates. -->
+<!-- The template uses the Django static template tag to link to a CSS file for styling. -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+    <link rel="stylesheet" href="{% static '/styles/main.css' %}">
+</head>
+<body>
+    <nav class="navbar">
     <ul>
         <li>
             <a href ="/">Inicio</a>
         </li>
         <li>
-            <a href ="/servicios_disponibles">Servicios Disponibles</a>
+            <a href ="/servicios_disponibles">Servicios disponibles</a>
         </li>
         <li>
-            <a href ="/listas_reservas">listas_reservas</a>
+            <a href ="/listas_reservas">Reservas activas</a>
         </li>
         <li>
-            <a href ="/reservar">reservar</a>
+            <a href ="/reservar">Reservar</a>
         </li>
         <li>
             <a href ="/admin">Admin</a>
@@ -19,6 +33,17 @@
 
     </ul>
 </nav>
-{% block content %}
+<main class="container">
+    {% block content %}
 
-{% endblock %}
+    {% endblock %}  
+
+</main>
+
+    <footer class="footer">
+        <p>2025 Hotel - Stefanie Bermudez. - Misael Gallo. - Nelson Garzón. - Jeryleefth Lasso.
+</p>
+    </footer>
+    
+</body>
+</html>

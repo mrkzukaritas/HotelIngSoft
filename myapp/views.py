@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Servicio,Reserva
 from django.shortcuts import get_object_or_404 , render, redirect
-from .forms import ReservaForm, pagarReservaForm
+from .forms import ReservaForm
 
 # Create your views here.
 
@@ -43,8 +43,17 @@ def Reservar(request):
             identificacion = request.POST['identificacion'],
             servicio = get_object_or_404(Servicio,numero=request.POST['servicio'])
         )
-        return redirect('/listas_reservas/')
+        return redirect('/listas_reservas')
 
 #pagina principal
 def index(request):
     return render(request,'index.html')
+
+def pagarReserva(request,codigo_reserva):
+    reserva = get_object_or_404(Reserva, codigo_reserva=codigo_reserva)
+    reserva.pagar()
+    return render(request, 'pagarReserva.html', {
+        'reserva': reserva,
+    })
+    
+    

@@ -19,10 +19,7 @@
     </p>
     {% if res.paga == False %}
     
-        <button>
-            pagar
-
-        </button>
+        <a href="{% url 'pagarReserva' codigo_reserva=res.codigo_reserva %}" class="btn">Pagar</a>
 
     {% endif %}
 

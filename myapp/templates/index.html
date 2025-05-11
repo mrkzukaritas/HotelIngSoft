@@ -1,10 +1,21 @@
 {% extends 'layouts/plantilla.html' %}
 
+{% load static %}
+
+
 
 {% block content %}
 <h1>
     Bienvenido al hotel 
 </h1>
-
+<img src="{% static 'image1.jpeg' %}" alt="Hotel" width="800" height="400">
+<p>
+    Este es un hotel de lujo donde puedes disfrutar de una estancia inolvidable.        
+    Contamos con habitaciones confortables, un restaurante gourmet y un spa de lujo.
+</p>
+<p>
+    Para realizar una reserva, por favor dirígete a la sección de reservas. 
+    Si ya tienes una reserva, puedes consultar el estado de tu pago en la sección de pagos.
+</p>
 {% endblock %}
 
