@@ -1,21 +1,52 @@
 {% extends 'layouts/plantilla.html' %}
-
 {% load static %}
 
-
-
 {% block content %}
-<h1>
-    Bienvenido al hotel 
-</h1>
-<img src="{% static 'image1.jpeg' %}" alt="Hotel" width="800" height="400">
-<p>
-    Este es un hotel de lujo donde puedes disfrutar de una estancia inolvidable.        
-    Contamos con habitaciones confortables, un restaurante gourmet y un spa de lujo.
-</p>
-<p>
-    Para realizar una reserva, por favor dirígete a la sección de reservas. 
-    Si ya tienes una reserva, puedes consultar el estado de tu pago en la sección de pagos.
-</p>
-{% endblock %}
 
+<section class="hero-section">
+    <div class="hero-text">
+        <h1>Bienvenidos al Hotel Almirante</h1>
+        <p>Tu mejor opción para una estancia inolvidable en la ciudad. Disfruta de nuestras habitaciones confortables y servicios exclusivos.</p>
+        <a href="/reservar" class="btn-primary" aria-label="Realizar una reserva">Reserva Ahora</a>
+    </div>
+    <div class="hero-image-container">
+        <img src="{% static 'image1.jpg' %}" alt="Hotel" class="hero-image" />
+    </div>
+</section>
+
+<section class="info-section">
+    <h2>Sobre Nosotros</h2>
+    <p>En Hotel Almirante, nos comprometemos a brindarte la mejor experiencia con instalaciones modernas, atención personalizada y servicios exclusivos.</p>
+    <ul class="features-list">
+        <li>WiFi de alta velocidad gratuito en todo el hotel</li>
+        <li>Desayuno buffet incluido</li>
+        <li>Estacionamiento privado y seguro</li>
+        <li>Servicio de habitaciones 24/7</li>
+    </ul>
+</section>
+
+<section class="services-section">
+    <h2>Servicios Exclusivos</h2>
+    <div class="services-grid">
+        <div class="service-card">
+            <h3>Restaurante Gourmet</h3>
+            <p>Disfruta de nuestra cocina internacional con ingredientes frescos y locales.</p>
+        </div>
+        <div class="service-card">
+            <h3>Spa y Bienestar</h3>
+            <p>Relájate con nuestros servicios de spa, masajes y tratamientos de bienestar.</p>
+        </div>
+        <div class="service-card">
+            <h3>Gimnasio</h3>
+            <p>Mantente en forma durante tu estancia con acceso a nuestro gimnasio totalmente equipado.</p>
+        </div>
+    </div>
+</section>
+
+<section class="booking-info">
+    <h2>¿Listo para reservar?</h2>
+    <p>Reserva tu habitación ahora y vive la experiencia única que solo Hotel XYZ puede ofrecer.</p>
+    <a href="/reservar" class="btn-primary" aria-label="Reservar ahora">Reserva Ahora</a>
+</section>
+
+{% endblock %}
