@@ -2,20 +2,146 @@
 
 {% load static %}
 
-
-
 {% block content %}
-<h1>
-    Bienvenido al hotel 
-</h1>
-<img src="{% static 'image1.jpeg' %}" alt="Hotel" width="800" height="400">
-<p>
-    Este es un hotel de lujo donde puedes disfrutar de una estancia inolvidable.        
-    Contamos con habitaciones confortables, un restaurante gourmet y un spa de lujo.
-</p>
-<p>
-    Para realizar una reserva, por favor dirígete a la sección de reservas. 
-    Si ya tienes una reserva, puedes consultar el estado de tu pago en la sección de pagos.
-</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Paraíso</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="{% static 'styles2.css' %}">
+</head>
+<body>
+    <div class="navbar-fluid">
+    <nav class="nav nav-mercadona">
+        <div class="logo-area">
+            <img src="{% static 'image1.jpeg' %}" alt="Hotel Paraíso Logo" class="logo-img">
+            <span class="logo-title">Hotel Paraíso</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/reservar/">Reservar</a></li>
+            <li><a href="/servicios/">Servicios</a></li>
+            <li><a href="/pagos/">Pagos</a></li>
+            <li><a href="/contacto/">Contacto</a></li>
+        </ul>
+    </nav>
+    </div>
+
+    <div id="root">
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Bienvenido a Hotel Paraíso</h1>
+            <p>Tu destino de lujo y confort en el corazón de la ciudad. Reserva tu experiencia inolvidable con nosotros.</p>
+            <a href="/reservar/" class="btn-reservar">Reservar ahora</a>
+        </div>
+        <div class="hero-img">
+            <img src="{% static 'image1.jpeg' %}" alt="Hotel Paraíso" />
+        </div>
+    </section>
+    <section class="servicios-destacados">
+        <h2>Nuestros Servicios</h2>
+        <div class="servicios-grid">
+            <div class="servicio-card">
+                <h3>Habitaciones de lujo</h3>
+                <p>Espaciosas, modernas y con vistas espectaculares.</p>
+            </div>
+            <div class="servicio-card">
+                <h3>Restaurante gourmet</h3>
+                <p>Gastronomía internacional y local de alta calidad.</p>
+            </div>
+            <div class="servicio-card">
+                <h3>Spa & Wellness</h3>
+                <p>Relájate en nuestro spa con tratamientos exclusivos.</p>
+            </div>
+            <div class="servicio-card">
+                <h3>Piscina y gimnasio</h3>
+                <p>Instalaciones modernas para tu bienestar y diversión.</p>
+            </div>
+        </div>
+    </section>
+    <section class="llamada-accion">
+        <h2>¿Listo para tu próxima aventura?</h2>
+        <a href="/reservar/" class="btn-reservar">Haz tu reserva</a>
+    </section>
+    </div>
+
+    <section class="o-footer">
+        <div class="o-footer-contain">
+            <div class="o-footer-links">
+                <div class="o-footer-link-section">
+                    <ul>
+                        <li>
+                            <h3>Cliente</h3>
+                        </li>
+                        <li>Decameron</li>
+                        <li>Viaja Con Nosotros</li>
+                        <li>Factura cliente</li>
+                    </ul>
+                </div>
+                <div class="o-footer-link-section">
+                    <ul>
+                        <li>
+                            <h3>Trabajador</h3>
+                        </li>
+                        <li>Trabaja con nosotros</li>
+                    </ul>
+                </div>
+                <div class="o-footer-link-section">
+                    <ul>
+                        <li>
+                            <h3>Proovedor</h3>
+                        </li>
+                        <li>Factura-Me</li>
+                        <li>Portal Trinidad</li>
+                    </ul>
+                </div>
+                <div class="o-footer-link-section">
+                    <ul>
+                        <li>
+                            <h3>Sociedad</h3>
+                        </li>
+                        <li>Actualidad</li>
+                        <li>Conoce del hotel</li>
+                        <li>Cuidemos del planeta</li>
+                    </ul>
+                </div>
+                <div class="o-footer-link-section">
+                    <div class="o-footer-phone-wrapper">
+                        <a class="o-footer-phone" arial-label="Llamar a atención al cliente" href="tel:+54 01800 123 4567">
+                        <div class="o-footer-phone">
+                            <div class="o-footer-support"></divcl>
+                            <div>01800 123 456</div>    
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="o-footer-fluid">
+        <footer class="o-footer">
+            <p class="o-copyright" i18n="footer_section.copyright">© Hotel Milan S.A. A46103834. Todos los derechos reservados.</p>
+            <ul class="o-legal">
+                <li> 
+                    <a href="/accesibilidad/" i18n="footer_section.accessibility">Accesibilidad</a> 
+                </li>
+                <li>
+                    <a href="/politica-privacidad/" i18n="footer_section.privacy_policy">Política d e privacidad</a>
+                </li>
+                <li>
+                    <a href="/politica-cookies/" i18n="footer_section.cookies_policy">Política de cookies</a>
+                </li>
+                <li>
+                    <a href="/Terminos-y-condiciones/" i18n="footer_section.terms_and_conditions">Términos y condiciones</s>
+                </li>
+            </ul>    
+        </footer>
+    </section>
+</body>
+
+
 {% endblock %}
 
