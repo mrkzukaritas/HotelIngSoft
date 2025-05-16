@@ -1,19 +1,14 @@
 {% extends 'layouts/plantilla.html' %}
 
-
 {% block content %}
-<h1>
-    Espacio para reservar 
-</h1>
-<form method="POST"">
+<section class="reserva-section main-content">
+  <h1 class="section-title">Reserva tu habitación</h1>
+
+  <form method="POST" class="reserva-form" novalidate>
     {% csrf_token %}
+    {{ form.as_p }}
 
-    {{form.as_p}}
-
-    <button>
-        Reservar
-    </button>
-
-</form>
+    <button type="submit" class="btn-primary">Reservar</button>
+  </form>
+</section>
 {% endblock %}
-

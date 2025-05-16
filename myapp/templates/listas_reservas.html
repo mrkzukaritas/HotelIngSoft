@@ -1,29 +1,24 @@
 {% extends 'layouts/plantilla.html' %}
 
 {% block content %}
-<h2>
-    espacio para ver las listas de reservas 
-</h2>
-{% for res in reservas %}
-{# comentario #}
-<div>
-    <h3>
-        {{res}}
-    </h3>
-    <p>
-        {{res.nombre}}
-        
-    </p>
-    <p>
-        {{res.servicio.numero}}
-    </p>
-    {% if res.paga == False %}
-    
-        <a href="{% url 'pagarReserva' codigo_reserva=res.codigo_reserva %}" class="btn">Pagar</a>
+<section class="reservas-section main-content">
+  <h2 class="section-title">Lista de Reservas</h2>
 
-    {% endif %}
+  <div class="reservas-grid">
+    {% for res in reservas %}
+      <div class="reserva-card">
+        <h3 class="reserva-nombre">{{ res.nombre }}</h3>
+        <p class="reserva-detalle">Número de servicio: {{ res.servicio.numero }}</p>
 
-</div>
-
-{% endfor %}
+        {% if not res.paga %}
+          <a href="{% url 'pagarReserva' codigo_reserva=res.codigo_reserva %}" class="btn-primary">Pagar</a>
+        {% else %}
+          <p class="reserva-pagada">Estado: <span style="color:#4caf50; font-weight:700;">Pagada</span></p>
+        {% endif %}
+      </div>
+    {% empty %}
+      <p>No hay reservas registradas.</p>
+    {% endfor %}
+  </div>
+</section>
 {% endblock %}
