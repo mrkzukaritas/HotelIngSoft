@@ -1,6 +1,6 @@
+/* 1. Importaciones y Reset */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
-/* Reset y tipografía base */
 * {
     margin: 0;
     padding: 0;
@@ -16,19 +16,18 @@ body {
     padding-top: 40px; /* Ajusta según la altura real del navbar */
 }
 
-/* Enlaces */
+/* 2. Enlaces */
 a {
     color: #0066cc;
     text-decoration: none;
     transition: color 0.3s ease;
 }
-
 a:hover, a:focus {
     color: #004a99;
     outline: none;
 }
 
-/* Navbar */
+/* 3. Navbar */
 .navbar {
     position: fixed;
     top: 0;
@@ -42,26 +41,22 @@ a:hover, a:focus {
     display: flex;
     align-items: center;
 }
-
 .navbar.scrolled {
     background-color: #c2d0e4;
     box-shadow: 0 4px 16px rgba(3, 58, 113, 0.16);
     transition: background-color 0.3s, box-shadow 0.3s;
 }
-
 .navbar-logo {
     display: flex;
     align-items: center;
     margin-right: 32px;
     height: 48px;
 }
-
 .navbar-logo img {
     height: 48px;
     width: auto;
     display: block;
 }
-
 .nav-list {
     display: flex;
     justify-content: center;
@@ -69,7 +64,6 @@ a:hover, a:focus {
     list-style: none;
     flex: 1;
 }
-
 .nav-list li a {
     font-weight: 600;
     font-size: 1.1rem;
@@ -79,7 +73,6 @@ a:hover, a:focus {
     position: relative;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 .nav-list li a::after {
     content: "";
     position: absolute;
@@ -91,13 +84,11 @@ a:hover, a:focus {
     border-radius: 3px;
     transition: width 0.3s ease, left 0.3s ease;
 }
-
 .nav-list li a:hover::after,
 .nav-list li a:focus::after {
     width: 60%;
     left: 20%;
 }
-
 .nav-list li a:hover,
 .nav-list li a:focus {
     background-color: #0066cc;
@@ -105,14 +96,14 @@ a:hover, a:focus {
     box-shadow: 0 0 10px #004a99;
 }
 
-/* Contenedor principal */
+/* 4. Contenedor principal */
 .main-content {
     max-width: 1100px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
-/* Hero Section */
+/* 5. Hero Section */
 .hero-section {
     display: flex;
     flex-wrap: wrap;
@@ -131,7 +122,6 @@ a:hover, a:focus {
     z-index: 1;
     box-shadow: 0 4px 24px rgba(0,0,0,0.18);
 }
-
 .hero-text {
     flex: 1 1 400px;
     animation: slideInLeft 1s ease forwards;
@@ -150,7 +140,6 @@ a:hover, a:focus {
     justify-content: center;
     min-height: 420px;
 }
-
 .hero-text h1 {
     color: #fff;
     font-size: 3.4rem;
@@ -159,74 +148,52 @@ a:hover, a:focus {
     letter-spacing: 1px;
     text-shadow: 0 4px 18px rgba(0,0,0,0.45);
 }
-
 .hero-text p {
     color: #e0e0e0;
     font-size: 1.35rem;
     margin-bottom: 32px;
     text-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
-
 .btn-primary {
     display: inline-block;
     background-color: #0066cc;
     color: #ffffff;
     font-weight: 700;
-    padding: 14px 36px;
-    border-radius: 10px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    border: none;
-    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.4);
     font-size: 1.15rem;
     padding: 16px 44px;
     border-radius: 12px;
     font-weight: 800;
     letter-spacing: 0.5px;
     box-shadow: 0 6px 18px rgba(0, 102, 204, 0.25);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: none;
 }
-
 .btn-primary:hover,
 .btn-primary:focus {
     background-color: #004a99;
     box-shadow: 0 0 15px #004a99;
 }
-
-/* Imagen hero */
 .hero-image-container {
     display: none;
 }
 
-/* Animaciones hero */
+/* 6. Animaciones hero */
 @keyframes slideInLeft {
-    0% {
-        transform: translateX(-50px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+    0% { transform: translateX(-50px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
 }
-
 @keyframes slideInRight {
-    0% {
-        transform: translateX(50px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+    0% { transform: translateX(50px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
 }
 
-/* Sección info */
+/* 7. Sección info */
 .info-section {
     margin-top: 60px;
     animation: fadeInUp 1s ease forwards;
     opacity: 0;
 }
-
 .info-section h2 {
     font-size: 2.6rem;
     margin-bottom: 18px;
@@ -234,7 +201,6 @@ a:hover, a:focus {
     border-left: 6px solid #0066cc;
     padding-left: 14px;
 }
-
 .features-list {
     margin-top: 18px;
     list-style: disc;
@@ -244,13 +210,12 @@ a:hover, a:focus {
     line-height: 1.6;
 }
 
-/* Servicios */
+/* 8. Servicios */
 .services-section {
     margin-top: 70px;
     animation: fadeInUp 1.2s ease forwards;
     opacity: 0;
 }
-
 .services-section h2 {
     font-size: 2.6rem;
     margin-bottom: 28px;
@@ -258,14 +223,12 @@ a:hover, a:focus {
     border-left: 6px solid #0066cc;
     padding-left: 14px;
 }
-
 .services-grid {
     display: flex;
     gap: 28px;
     flex-wrap: wrap;
     justify-content: center;
 }
-
 .service-card {
     background-color: #fafafa;
     flex: 1 1 320px;
@@ -277,12 +240,10 @@ a:hover, a:focus {
     text-align: center;
     cursor: default;
 }
-
 .service-card:hover {
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0 15px 35px rgba(0,102,204,0.45);
 }
-
 .service-card img {
     max-width: 100%;
     border-radius: 14px;
@@ -290,32 +251,26 @@ a:hover, a:focus {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: transform 0.35s ease;
 }
-
 .service-card:hover img {
     transform: scale(1.05);
 }
-
 .service-card h3 {
     font-size: 1.9rem;
     margin-bottom: 14px;
     color: #0066cc;
     font-weight: 700;
 }
-
 .service-card p {
     font-size: 1.1rem;
     line-height: 1.5;
     margin-bottom: 10px;
 }
-
-/* Servicios no disponibles */
 .service-card.unavailable {
     background-color: #eaeaea;
     color: #999999;
     font-style: italic;
     cursor: not-allowed;
 }
-
 .status-unavailable {
     color: #d9534f;
     font-weight: 700;
@@ -323,27 +278,25 @@ a:hover, a:focus {
     font-size: 1.15rem;
 }
 
-/* Información de reservas */
+/* 9. Información de reservas */
 .booking-info {
     margin: 80px 0 50px;
     text-align: center;
     animation: fadeInUp 1.5s ease forwards;
     opacity: 0;
 }
-
 .booking-info h2 {
     font-size: 2.8rem;
     color: #0066cc;
     margin-bottom: 20px;
 }
-
 .booking-info p {
     font-size: 1.25rem;
     margin-bottom: 30px;
     color: #666666;
 }
 
-/* Botones generales */
+/* 10. Botones generales */
 button, .btn {
     background-color: #0066cc;
     color: white;
@@ -355,7 +308,6 @@ button, .btn {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     user-select: none;
 }
-
 button:hover, button:focus,
 .btn:hover, .btn:focus {
     background-color: #004a99;
@@ -363,12 +315,11 @@ button:hover, button:focus,
     outline: none;
 }
 
-/* Footer */
+/* 11. Footer */
 .footer {
     width: 100%;
     background-color: #0a141d;
 }
-
 .footer .grupo-1{
     width: 100%;
     max-width: 1200px;
@@ -379,7 +330,6 @@ button:hover, button:focus,
     grid-gap: 50px;
     padding: 45px 0;
 }
-
 .footer .grupo-1 .box figure{
     width: 100%;
     height: 100%;
@@ -387,22 +337,18 @@ button:hover, button:focus,
     justify-content: center;
     align-items: center;
 }
-
 .footer .grupo-1 .box figure img{
     width: 250px;
 }
-
 .footer .grupo-1 .box h2{
     color: #fff;
     margin-bottom: 25px;
     font-size: 20px;
 }
-
 .footer .grupo-1 .box p{
     color: #efefef;
     margin-bottom: 10px;
 }
-
 .footer .grupo-1 .red-social a{
     display: inline-block;
     text-decoration: none;
@@ -415,78 +361,20 @@ button:hover, button:focus,
     text-align: center;
     transition: all 300ms ease;
 }
-
 .footer .grupo-1 .red-social a:hover{
     color:aqua
 }
-
 .footer .grupo-2 {
     background-color: #0a1a2a;
     padding: 15px 10px;
     text-align: center;
     color: #fff;
 }
-
-.footer .grupo-2 {
-    background-color: #0a1a2a;
-    padding: 15px 10px;
-    text-align: center;
-    color: #fff;
-}
-
 .footer .grupo-2 small {
     font-size: 15px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-
-    .navbar {
-        padding: 18px 10px;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .nav-list {
-        flex-direction: column;
-        gap: 0;
-        background: #f9f9f9;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        display: none;
-    }
-
-    .nav-list.active {
-        display: flex;
-    }
-
-    .navbar-logo {
-        margin-right: 0;
-    }
-
-    .footer .grupo-1{
-    width: 90%;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 30px;
-    padding: 35px 0;
-}
-    .hero-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-text, .hero-image-container {
-        flex: 1 1 100%;
-    }
-
-    .services-grid {
-        flex-direction: column;
-        gap: 22px;
-    }
-}
-
+/* 12. Responsive */
 @media (max-width: 900px) {
     .hero-section {
         flex-direction: column;
@@ -504,105 +392,143 @@ button:hover, button:focus,
         min-height: 320px;
     }
 }
-
-/* Animaciones generales */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
+@media (max-width: 768px) {
+    .navbar {
+        padding: 18px 10px;
+        flex-direction: row;
+        justify-content: space-between;
     }
-    100% {
-        opacity: 1;
-    transform: translateY(0);
+    .nav-list {
+        flex-direction: column;
+        gap: 0;
+        background: #f9f9f9;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        display: none;
+    }
+    .nav-list.active {
+        display: flex;
+    }
+    .navbar-logo {
+        margin-right: 0;
+    }
+    .footer .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0;
+    }
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text, .hero-image-container {
+        flex: 1 1 100%;
+    }
+    .services-grid {
+        flex-direction: column;
+        gap: 22px;
+    }
 }
+@media (max-width: 600px) {
+    .reservas-section {
+        padding: 0 4vw;
+    }
+    .reservas-section .section-title {
+        font-size: 1.5rem;
+        padding-left: 10px;
+    }
+    .reserva-card {
+        padding: 22px 10px 18px 14px;
+        min-height: 120px;
+    }
+}
+@media (max-width: 480px) {
+    .reserva-form button {
+        width: 100%;
+    }
 }
 
+/* 13. Animaciones generales */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* 14. Servicios imágenes */
 .service-image {
-width: 100%;
-max-width: 300px;
-height: auto;
-border-radius: 10px;
-margin-bottom: 10px;
-box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    object-fit: cover;
 }
 
-/* --- NUEVO: Sección reserva --- */
+/* 15. Sección reserva (formulario) */
 .reserva-section {
-max-width: 700px;
-margin: 50px auto 80px;
-padding: 30px 25px;
-background-color: #fafafa;
-border-radius: 18px;
-box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-animation: fadeInUp 1.5s ease forwards;
-opacity: 0;
+    max-width: 700px;
+    margin: 50px auto 80px;
+    padding: 30px 25px;
+    background-color: #fafafa;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    animation: fadeInUp 1.5s ease forwards;
+    opacity: 0;
 }
-
 .reserva-section h2 {
-color: #0066cc;
-font-size: 2.4rem;
-margin-bottom: 25px;
-border-left: 6px solid #0066cc;
-padding-left: 14px;
-
-}  
-
+    color: #0066cc;
+    font-size: 2.4rem;
+    margin-bottom: 25px;
+    border-left: 6px solid #0066cc;
+    padding-left: 14px;
+}
 .reserva-form {
-display: flex;
-flex-direction: column;
-gap: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
-
 .reserva-form label {
-font-weight: 600;
-font-size: 1.1rem;
-color: #222222;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #222222;
 }
-
 .reserva-form input[type="text"],
 .reserva-form input[type="email"],
 .reserva-form input[type="number"],
 .reserva-form input[type="date"],
 .reserva-form select {
-padding: 12px 16px;
-font-size: 1rem;
-border: 1.8px solid #ccc;
-border-radius: 12px;
-transition: border-color 0.3s ease;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: 1.8px solid #ccc;
+    border-radius: 12px;
+    transition: border-color 0.3s ease;
 }
-
 .reserva-form input[type="text"]:focus,
 .reserva-form input[type="email"]:focus,
 .reserva-form input[type="number"]:focus,
 .reserva-form input[type="date"]:focus,
 .reserva-form select:focus {
-outline: none;
-border-color: #0066cc;
-box-shadow: 0 0 8px #0066cc;
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 8px #0066cc;
 }
-
-/* Botón enviar en reserva */
 .reserva-form button {
-width: 160px;
-align-self: flex-start;
-padding: 14px 0;
+    width: 160px;
+    align-self: flex-start;
+    padding: 14px 0;
 }
 
-/* Ajustes responsive para formulario */
-@media (max-width: 480px) {
-.reserva-form button {
-width: 100%;
-}
-}
-
-/* --- NUEVO: Sección reservas activas elegante --- */
+/* 16. Sección reservas activas elegante */
 .reservas-section {
   max-width: 900px;
   margin: 60px auto 80px;
   padding: 0 18px;
   background: none;
 }
-
 .reservas-section .section-title {
   font-size: 2.3rem;
   color: #0a2a43;
@@ -613,13 +539,11 @@ width: 100%;
   border-left: 6px solid #0066cc;
   padding-left: 18px;
 }
-
 .reservas-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 32px;
 }
-
 .reserva-card {
   background: #fff;
   border-radius: 18px;
@@ -632,12 +556,10 @@ width: 100%;
   min-height: 180px;
   position: relative;
 }
-
 .reserva-card:hover {
   box-shadow: 0 12px 36px rgba(0,102,204,0.18), 0 2px 12px rgba(0,0,0,0.08);
   transform: translateY(-4px) scale(1.015);
 }
-
 .reserva-nombre {
   font-size: 1.35rem;
   font-weight: 700;
@@ -645,13 +567,11 @@ width: 100%;
   margin-bottom: 8px;
   letter-spacing: 0.2px;
 }
-
 .reserva-detalle {
   color: #444;
   font-size: 1.08rem;
   margin-bottom: 18px;
 }
-
 .reserva-pagada {
   background: #eafbe7;
   color: #388e3c;
@@ -661,7 +581,6 @@ width: 100%;
   font-size: 1.05rem;
   margin-top: 10px;
 }
-
 .reserva-card .btn-primary {
   align-self: flex-end;
   margin-top: auto;
@@ -671,25 +590,10 @@ width: 100%;
   font-weight: 700;
   box-shadow: 0 2px 8px rgba(0,102,204,0.10);
 }
-
 .reservas-grid p {
   color: #888;
   font-size: 1.1rem;
   text-align: center;
   grid-column: 1/-1;
-}
-
-@media (max-width: 600px) {
-  .reservas-section {
-    padding: 0 4vw;
-  }
-  .reservas-section .section-title {
-    font-size: 1.5rem;
-    padding-left: 10px;
-  }
-  .reserva-card {
-    padding: 22px 10px 18px 14px;
-    min-height: 120px;
-  }
 }
 
