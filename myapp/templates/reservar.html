@@ -4,6 +4,40 @@
 <section class="reserva-section main-content">
   <h1 class="section-title">Reserva tu habitación</h1>
 
+  <style>
+    /* Estilos para alinear los campos */
+    .reserva-form p {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    
+    .reserva-form label {
+      min-width: 150px; /* Ancho fijo para etiquetas */
+      text-align: right;
+      margin-right: 15px;
+    }
+    
+    .reserva-form input, 
+    .reserva-form select {
+      flex: 1;
+      max-width: 300px;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    
+    .btn-primary {
+      margin-left: 165px; /* Alineado con los campos */
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+
   <form method="POST" class="reserva-form" novalidate>
     {% csrf_token %}
     {{ form.as_p }}
