@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
 /* Reset y tipografía base */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Open Sans', 'san-serif', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -11,6 +13,7 @@ body {
     color: #111111;
     line-height: 1.6;
     transition: background-color 0.5s ease, color 0.5s ease;
+    padding-top: 70px; /* Ajusta según la altura real del navbar */
 }
 
 /* Enlaces */
@@ -27,9 +30,36 @@ a:hover, a:focus {
 
 /* Navbar */
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     background-color: #f9f9f9;
     padding: 15px 30px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.navbar.scrolled {
+    background-color: #c2d0e4;
+    box-shadow: 0 4px 16px rgba(3, 58, 113, 0.16);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 32px;
+    height: 48px;
+}
+
+.navbar-logo img {
+    height: 48px;
+    width: auto;
+    display: block;
 }
 
 .nav-list {
@@ -37,6 +67,7 @@ a:hover, a:focus {
     justify-content: center;
     gap: 28px;
     list-style: none;
+    flex: 1;
 }
 
 .nav-list li a {
@@ -312,17 +343,113 @@ button:hover, button:focus,
 
 /* Footer */
 .footer {
-    background-color: #f9f9f9;
-    color: #666666;
+    width: 100%;
+    background-color: #0a141d;
+}
+
+.footer .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0;
+}
+
+.footer .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .grupo-1 .box figure img{
+    width: 250px;
+}
+
+.footer .grupo-1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.footer .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.footer .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #0d2033;
     text-align: center;
-    padding: 24px 10px;
-    font-size: 0.95rem;
-    border-top: 1px solid #ddd;
-    user-select: none;
+    transition: all 300ms ease;
+}
+
+.footer .grupo-1 .red-social a:hover{
+    color:aqua
+}
+
+.footer .grupo-2 {
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.footer .grupo-2 {
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.footer .grupo-2 small {
+    font-size: 15px;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+
+    .navbar {
+        padding: 18px 10px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 0;
+        background: #f9f9f9;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        display: none;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .navbar-logo {
+        margin-right: 0;
+    }
+
+    .footer .grupo-1{
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0;
+}
     .hero-section {
         flex-direction: column;
         text-align: center;
