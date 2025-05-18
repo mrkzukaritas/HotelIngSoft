@@ -4,13 +4,18 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
     <title>Hotel Almirante</title>
     <link rel="stylesheet" href="{% static 'styles/main.css' %}" />
+
+    <script src="https://kit.fontawesome.com/769d2d5dab.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <nav class="navbar">
+            <a href="/" class="navbar-logo" aria-label="Inicio">
+                <img src="{% static 'Favicon_Hotel.png' %}" alt="Hotel Almirante Logo" style="height:48px; width:auto; display:block;" />
+            </a>
             <ul class="nav-list">
                 <li><a href="/" aria-label="Inicio">Inicio</a></li>
                 <li><a href="/servicios_disponibles" aria-label="Servicios">Servicios</a></li>
@@ -27,7 +32,35 @@
     </main>
 
     <footer class="footer">
-        <p>© 2025 Hotel Almirante - Stefanie Bermudez, Misael Gallo, Nelson Garzón, Jeryleefth Lasso.</p>
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="{% static 'Logo Hotel.png' %}" alt="Logo del hotel">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>En Hotel Almirante, nos comprometemos a brindarte la mejor experiencia con instalaciones modernas, atención personalizada y servicios exclusivos.</p>
+                <p>Ubicados en el corazón de Melgar, ofrecemos un ambiente acogedor y cómodo para que disfrutes de tu estancia.</p>
+            </div>
+            <div class="box">
+                <h2>SIGUENOS</h2>
+                <div class="red-social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                </div>
+            </div>
+        </div>    
+        <div class="grupo-2">
+            <small>
+                © 2025 <b>Hotel Almirante</b> - Stefanie Bermudez, Misael Gallo, Nelson Garzón, Jeryleefth Lasso.
+            </small>    
+        </div>
     </footer>
+    <script src="{% static 'styles/navbar.js' %}"></script>
 </body>
 </html>
