@@ -22,6 +22,13 @@ class Servicio(models.Model):
 
     def __str__(self):
         return str(self.numero )+ "_" +str(TiposServicios(self.tipo).label)
+    def valor_dolares(self):
+        #QUIERO formatearlo a 2 decimales
+        # Cambia 4000 por la tasa de cambio actual si es necesario
+        tasa_cambio = 4200
+        valor_dolares = self.valor / tasa_cambio
+        return "{:.2f}".format(valor_dolares)
+    
 
 
 

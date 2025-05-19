@@ -12,7 +12,7 @@
                 <img src="{% static '' %}{{ ser.numero }}.jpg" alt="Imagen del servicio {{ ser.numero }}" class="service-image">
                 <h3>{{ ser }}</h3>
                 <p><strong>Especificaciones:</strong> {{ ser.especificacion }}</p>
-                <p><strong>Valor:</strong> ${{ ser.valor }}</p>
+                <p><strong>Valor:</strong> {{ ser.valor }} COP (≈{{ ser.valor_dolares }} USD)</p>
             </article>
             {% else %}
             <article class="service-card unavailable">
