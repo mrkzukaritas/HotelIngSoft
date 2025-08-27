@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from .models import Servicio,Reserva
 from django.shortcuts import get_object_or_404 , render, redirect
 from .forms import ReservaForm
